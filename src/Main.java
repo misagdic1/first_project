@@ -1,14 +1,24 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-    for (int i = 1; i <= 18; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Kullanıcı adınızı girin: ");
+        String username = scanner.nextLine();
+
+        System.out.print("Şifrenizi girin: ");
+        String password = scanner.nextLine();  // Konsolda görünür
+
+        System.out.println("Kullanıcı adı: " + username);
+        System.out.println("Şifre: " + password);
+
+        if("admin".equalsIgnoreCase(username) && "1234".equalsIgnoreCase(password)) {
+            System.out.println("Başarılı");
+
+        }else{
+            System.out.println("Başarısız");
+
+        }
     }
 }
